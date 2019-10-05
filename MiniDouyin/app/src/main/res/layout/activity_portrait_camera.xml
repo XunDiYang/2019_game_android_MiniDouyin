@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- By yxd-->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="50dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true">
+
+        <!--设置闪光灯-->
+        <ImageView
+            android:id="@+id/light"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/light"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:id="@+id/btn_facing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/switchcamera" />
+
+        <!--设置竖直seekbar-->
+        <com.xdx.yyh.bit.finalwork.MiniDouyin.widget.VerticalSeekBarWrapper
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_gravity="center">
+            <com.xdx.yyh.bit.finalwork.MiniDouyin.widget.VerticalSeekBar
+                android:id="@+id/zoom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:seekBarRotation="CW270"
+                android:splitTrack="false"/>
+        </com.xdx.yyh.bit.finalwork.MiniDouyin.widget.VerticalSeekBarWrapper>
+
+    </LinearLayout>
+
+    <!-- By yxd-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:weightSum="4"
+        android:gravity="center">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_camera" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
